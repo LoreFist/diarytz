@@ -11,7 +11,7 @@ class DefaultController extends Controller {
      */
     public function actions() {
         return [
-            'error'   => [
+            'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
         ];

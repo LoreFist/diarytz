@@ -34,6 +34,16 @@ $params = \yii\helpers\ArrayHelper::merge(
     require(__DIR__ . DIRECTORY_SEPARATOR . 'params-local.php')
 );
 
+$config['components']['view'] = [
+    'theme' => [
+        'basePath' => '@app/themes/copytemplate',
+        'baseUrl'  => '@web/themes/copytemplate',
+        'pathMap'  => [
+            '@app/views' => '@app/themes/copytemplate/views',
+        ],
+    ],
+];
+
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][]      = 'debug';
