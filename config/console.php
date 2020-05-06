@@ -38,6 +38,9 @@ $config = [
             'migrationPath'       => [
                 '@app/modules/user/migrations',
             ],
+            'migrationNamespaces' => [
+                'yii\queue\db\migrations',
+            ],
         ],
     ],
     'modules'             => [

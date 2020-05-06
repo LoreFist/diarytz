@@ -1,24 +1,25 @@
 <?php
 
 $config = [
-    'id'           => 'basic',
-    'basePath'     => dirname(__DIR__),
-    'components'   => [
+    'id'         => 'basic',
+    'basePath'   => dirname(__DIR__),
+    'components' => [
         'request'      => [
             'cookieValidationKey' => '9RA9ZOFqFSOcteHzwnGWSupw5LHvssOm',
         ],
         'user'         => [
             'identityClass'   => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'        => ['/user/default/login'],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site/default/error',
         ],
         'urlManager'   => [
             'rules' => require __DIR__ . DIRECTORY_SEPARATOR . 'rules.php',
         ],
     ],
-    'modules'      => [
+    'modules'    => [
         'site' => [
             'class' => 'app\modules\site\Module',
         ],
